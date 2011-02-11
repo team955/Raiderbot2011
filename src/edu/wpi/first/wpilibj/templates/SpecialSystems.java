@@ -37,8 +37,7 @@ public class SpecialSystems {
 	public void runArm(MyJoystick sticky, DriverStation driverStation) {
 		armEncoderValue = armEncoder.get();
 		if(encoderCalibrator.get()){
-			Global.armMiddle =
-					armEncoderValue + Global.armMiddle - Global.armMin;
+			Global.armMiddle = armEncoderValue + Global.armMiddle - Global.armMin;
 		}
 		joyY = -sticky.getY() * Math.abs(sticky.getY());
 		if (sticky.debounce(Global.manualSwitchButton)) {
